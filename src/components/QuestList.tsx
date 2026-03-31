@@ -3,12 +3,11 @@ import type { Quest } from "@/data/fitnessQuests";
 
 interface QuestListProps {
   worldId: string;
-  worldName: string;
   worldEmoji: string;
   quests: Quest[];
 }
 
-const QuestList = ({ worldId, worldName, worldEmoji, quests }: QuestListProps) => {
+const QuestList = ({ worldId, worldEmoji, quests }: QuestListProps) => {
   const storageKey = `sidequest_${worldId}`;
 
   const loadState = useCallback((): Record<string, boolean> => {

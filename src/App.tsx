@@ -1,31 +1,25 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import Worlds from "./pages/Worlds.tsx";
-import FitnessWorld from "./pages/FitnessWorld.tsx";
-import StudyWorld from "./pages/StudyWorld.tsx";
-import NotFound from "./pages/NotFound.tsx";
+
+import Index from "./pages/Index";
+import Worlds from "./pages/Worlds";
+import FitnessWorld from "./pages/FitnessWorld";
+import StudyWorld from "./pages/StudyWorld";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/worlds" element={<Worlds />} />
-          <Route path="/worlds/fitness" element={<FitnessWorld />} />
-          <Route path="/worlds/study" element={<StudyWorld />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/worlds" element={<Worlds />} />
+        <Route path="/worlds/fitness" element={<FitnessWorld />} />
+        <Route path="/worlds/study" element={<StudyWorld />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   </QueryClientProvider>
 );
 
