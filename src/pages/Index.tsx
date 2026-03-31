@@ -36,7 +36,7 @@ const Index = () => {
         {/* Footer info */}
         <div className="animate-fade-up animate-fade-up-delay-3 pt-8">
           <p className="text-muted-foreground text-xs font-mono">
-            [ open source · modular · no backend ]
+            [ discover worlds · take action · stay consistent ]
           </p>
         </div>
       </div>
