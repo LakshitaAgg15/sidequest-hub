@@ -52,9 +52,28 @@ const Worlds = () => {
       </header>
 
       <main className="max-w-4xl mx-auto px-6 py-12">
+
+
         <div className="space-y-2 mb-10 animate-fade-up">
-          <h1 className="text-3xl font-heading font-bold text-foreground">Select a World</h1>
-          <p className="text-muted-foreground text-sm font-mono">Choose your quest line. More worlds coming soon.</p>
+        <div className="flex justify-between items-center">
+         <h1 className="text-3xl font-heading font-bold text-foreground">
+           Select a World
+         </h1>
+
+        <button
+          onClick={() => navigate("/about")}
+          className="px-3 py-1 border border-border rounded text-primary hover:bg-primary/10 transition-all text-sm font-mono"
+         >
+           About
+        </button>
+        </div>
+
+  <p className="text-muted-foreground text-sm font-mono">
+    Choose your quest line. More worlds coming soon.
+  </p>
+</div>
+        
+        <div className="flex gap-4 mb-10 animate-fade-up">
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

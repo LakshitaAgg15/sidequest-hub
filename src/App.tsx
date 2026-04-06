@@ -6,6 +6,7 @@ import Worlds from "./pages/Worlds";
 import FitnessWorld from "./pages/FitnessWorld";
 import StudyWorld from "./pages/StudyWorld";
 import NotFound from "./pages/NotFound";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
         <Route path="/worlds" element={<Worlds />} />
         <Route path="/worlds/fitness" element={<FitnessWorld />} />
         <Route path="/worlds/study" element={<StudyWorld />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
