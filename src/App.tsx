@@ -10,15 +10,11 @@ import SocialWorld from "./pages/SocialWorld";
 import CreativeWorld from "./pages/CreativeWorld";
 import QuickStart from "./pages/QuickStart";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <BrowserRouter>
-    <Header/>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/quick-start" element={<QuickStart />} />
@@ -29,7 +25,6 @@ const App = () => (
         <Route path="/worlds/creative" element={<CreativeWorld />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer/>
     </BrowserRouter>
   </QueryClientProvider>
 );
