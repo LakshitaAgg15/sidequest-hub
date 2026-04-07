@@ -43,6 +43,14 @@ const Worlds = () => {
 
   return (
     <div className="min-h-screen grid-bg">
+      {/* Header */}
+      <header className="border-b border-border px-6 py-4 flex items-center justify-between">
+        <button onClick={() => navigate("/")} className="font-heading font-bold text-foreground text-lg bg-transparent border-none cursor-pointer hover:text-primary transition-colors">
+          SQ
+        </button>
+        <span className="text-muted-foreground text-xs font-mono">worlds://index</span>
+      </header>
+
       <main className="max-w-4xl mx-auto px-6 py-12">
         <div className="space-y-2 mb-10 animate-fade-up">
           <h1 className="text-3xl font-heading font-bold text-foreground">Select a World</h1>
