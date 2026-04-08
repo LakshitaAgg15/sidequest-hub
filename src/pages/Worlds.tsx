@@ -13,8 +13,8 @@ interface WorldCard {
 const worlds: WorldCard[] = [
   { id: "fitness", name: "Fitness World", emoji: "🏋️", description: "Move your body, level up your health.", active: true, path: "/worlds/fitness" },
   { id: "study", name: "Study World", emoji: "📚", description: "Learn something new every day.", active: true, path: "/worlds/study" },
-  { id: "social", name: "Social World", emoji: "🤝", description: "Build connections, grow your network.", active: false },
-  { id: "creative", name: "Creative World", emoji: "🎨", description: "Express yourself through creation.", active: false },
+  { id: "social", name: "Social World", emoji: "🤝", description: "Build connections, grow your network.", active: true, path: "/worlds/social" },
+  { id: "creative", name: "Creative World", emoji: "🎨", description: "Express yourself through creation.", active: true, path: "/worlds/creative" },
 ];
 
 const getProgress = (worldId: string): { done: number; total: number } => {
@@ -42,19 +42,27 @@ const Worlds = () => {
   };
 
   return (
-    <div className="min-h-screen grid-bg">
+    <div className="fixed inset-0 flex flex-col grid-bg">
       {/* Header */}
-      <header className="border-b border-border px-6 py-4 flex items-center justify-between">
+      <header className="border-b border-border px-6 py-4 flex items-center justify-between bg-background z-10 sticky top-0">
         <button onClick={() => navigate("/")} className="font-heading font-bold text-foreground text-lg bg-transparent border-none cursor-pointer hover:text-primary transition-colors">
           SQ
         </button>
-        <span className="text-muted-foreground text-xs font-mono">worlds://index</span>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => navigate("/random")}
+            className="text-xs font-mono text-muted-foreground border border-border px-3 py-1.5 hover:border-primary hover:text-primary transition-colors duration-200 cursor-pointer bg-transparent"
+          >
+            🎲 Random Quest
+          </button>
+          <span className="text-muted-foreground text-xs font-mono">worlds://index</span>
+        </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-12">
+      <main className="flex-1 overflow-auto w-full">
 
 
-        <div className="space-y-2 mb-10 animate-fade-up">
+        <div className="max-w-4xl mx-auto px-6 pt-12 space-y-2 mb-10 animate-fade-up">
         <div className="flex justify-between items-center">
          <h1 className="text-3xl font-heading font-bold text-foreground">
            Select a World
@@ -76,7 +84,7 @@ const Worlds = () => {
         <div className="flex gap-4 mb-10 animate-fade-up">
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-w-4xl mx-auto px-6 pb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {worlds.map((world, i) => {
             const progress = world.active ? getProgress(world.id) : null;
             const isHovered = hoveredId === world.id;
@@ -119,7 +127,7 @@ const Worlds = () => {
                   </span>
                 )}
 
-                {world.active && progress && progress.total > 0 && (
+                {world.active && progress && progress && (
                   <div className="mt-auto pt-2">
                     <div className="flex justify-between text-xs text-muted-foreground mb-1">
                       <span>progress</span>
