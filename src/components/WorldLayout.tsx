@@ -19,7 +19,17 @@ const WorldLayout = ({ worldName, children }: WorldLayoutProps) => {
           ← worlds
         </button>
         <div className="w-px h-5 bg-border" />
-        <span className="text-foreground font-heading font-semibold text-sm tracking-wide">{worldName}</span>
+
+        <button
+           onClick={() => navigate("/about")}
+          className="text-muted-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer text-sm font-mono"
+           >
+           about
+        </button>
+
+<div className="w-px h-5 bg-border" />
+
+<span className="text-foreground font-heading font-semibold text-sm tracking-wide">{worldName}</span>
         <span className="ml-auto text-[10px] text-muted-foreground font-mono opacity-50">
           module::loaded
         </span>
