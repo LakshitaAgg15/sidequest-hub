@@ -4,7 +4,6 @@ import { fitnessQuests } from "@/data/fitnessQuests";
 import { studyQuests } from "@/data/studyQuests";
 import { socialQuests } from "@/data/socialQuests";
 import { creativeQuests } from "@/data/creativeQuests";
-import { detoxQuests } from "@/data/detoxQuests";
 
 interface QuestWithWorld {
   id: string;
@@ -19,7 +18,6 @@ const allQuests: QuestWithWorld[] = [
   ...studyQuests.map((q) => ({ ...q, world: "Study World", emoji: "📚", worldId: "study" })),
   ...socialQuests.map((q) => ({ ...q, world: "Social World", emoji: "🤝", worldId: "social" })),
   ...creativeQuests.map((q) => ({ ...q, world: "Creative World", emoji: "🎨", worldId: "creative" })),
-  ...detoxQuests.map((q) => ({ ...q, world: "Detox World", emoji: "📵", worldId: "detox" })),
 ];
 
 const RandomQuest = () => {
