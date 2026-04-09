@@ -8,6 +8,7 @@ import StudyWorld from "./pages/StudyWorld";
 import NotFound from "./pages/NotFound";
 import SocialWorld from "./pages/SocialWorld";
 import CreativeWorld from "./pages/CreativeWorld";
+import FinanceWorld from "./pages/FinanceWorld";
 import QuickStart from "./pages/QuickStart";
 import RandomQuest from "./pages/RandomQuest";
 import About from "./pages/About";
@@ -25,6 +26,7 @@ const App = () => (
         <Route path="/worlds/study" element={<StudyWorld />} />
         <Route path="/worlds/social" element={<SocialWorld />} />
         <Route path="/worlds/creative" element={<CreativeWorld />} />
+        <Route path="/worlds/finance" element={<FinanceWorld />} />
         <Route path="/random" element={<RandomQuest />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
