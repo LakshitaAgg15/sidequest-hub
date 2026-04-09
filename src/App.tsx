@@ -11,6 +11,8 @@ import CreativeWorld from "./pages/CreativeWorld";
 import QuickStart from "./pages/QuickStart";
 import RandomQuest from "./pages/RandomQuest";
 import About from "./pages/About";
+import MindfulnessWorld from "@/pages/MindfulnessWorld";
+
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,7 @@ const App = () => (
         <Route path="/worlds/study" element={<StudyWorld />} />
         <Route path="/worlds/social" element={<SocialWorld />} />
         <Route path="/worlds/creative" element={<CreativeWorld />} />
+        <Route path="/worlds/mindfulness" element={<MindfulnessWorld />} />
         <Route path="/random" element={<RandomQuest />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
