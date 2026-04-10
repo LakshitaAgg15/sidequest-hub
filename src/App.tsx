@@ -17,10 +17,7 @@ import OutdoorWorld from "@/pages/OutdoorWorld";
 import HealthWorld from "@/pages/HealthWorld";
 import FunWorld from "@/pages/FunWorld";
 import AudioWorld from "@/pages/AudioWorld";
-
-
-
-
+import ProblemSolvingWorld from "@/pages/ProblemSolvingWorld";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +41,7 @@ const App = () => (
         <Route path="/worlds/health" element={<HealthWorld/>} />
         <Route path="/worlds/fun" element={<FunWorld />} />
         <Route path="/worlds/audio" element={<AudioWorld />} />
+        <Route path="/worlds/problem-solving" element={<ProblemSolvingWorld />} />
       </Routes>
     </BrowserRouter>
   </QueryClientProvider>
