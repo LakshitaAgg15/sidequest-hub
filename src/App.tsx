@@ -11,10 +11,11 @@ import CreativeWorld from "./pages/CreativeWorld";
 import FinanceWorld from "./pages/FinanceWorld";
 import QuickStart from "./pages/QuickStart";
 import RandomQuest from "./pages/RandomQuest";
-import OutdoorWorld from "./pages/OutdoorWorld";
-import HealthWorld from "./pages/HealthWorld";
-import FunWorld from "./pages/FunWorld";
-
+import About from "./pages/About";
+import MindfulnessWorld from "@/pages/MindfulnessWorld";
+import OutdoorWorld from "@/pages/OutdoorWorld";
+import HealthWorld from "@/pages/HealthWorld";
+import FunWorld from "@/pages/FunWorld";
 
 const queryClient = new QueryClient();
 
@@ -29,10 +30,15 @@ const App = () => (
         <Route path="/worlds/study" element={<StudyWorld />} />
         <Route path="/worlds/social" element={<SocialWorld />} />
         <Route path="/worlds/creative" element={<CreativeWorld />} />
+        <Route path="/worlds/mindfulness" element={<MindfulnessWorld />} />
+        <Route path="/worlds/finance" element={<FinanceWorld />} />
+        <Route path="/random" element={<RandomQuest />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
         <Route path="/worlds/outdoor" element={<OutdoorWorld />} />
         <Route path="/worlds/health" element={<HealthWorld/>} />
         <Route path="/worlds/fun" element={<FunWorld />} />
-        <Route path="*" element={<NotFound />} />
+  
       </Routes>
     </BrowserRouter>
   </QueryClientProvider>
