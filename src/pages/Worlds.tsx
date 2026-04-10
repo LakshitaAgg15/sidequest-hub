@@ -22,7 +22,7 @@ const worlds: WorldCard[] = [
   { id: "health", name: "Health & Nutrition World", emoji: "🥗", description: "Build small daily habits for a healthier diet.", active: true, path: "/worlds/health" },
   { id: "fun", name: "Fun & Play World", emoji: "🎉", description: "Relax, enjoy, and have fun while staying active.", active: true, path: "/worlds/fun" },
   { id: "audio", name: "Audio & Learning World", emoji: "🎧", description: "Turn passive listening into active learning.", active: true, path: "/worlds/audio" },
-  { id: "problem-solving", name: "Problem Solving World", emoji: "🧠", description: "Sharpen your thinking with daily mental challenges.", active: true, path: "/worlds/audio" },
+  { id: "problem-solving", name: "Problem Solving World", emoji: "🧠", description: "Sharpen your thinking with daily mental challenges.", active: true, path: "/worlds/problem-solving" },
 ];
 
 const triggerConfetti = () => {
