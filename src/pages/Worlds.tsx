@@ -17,6 +17,7 @@ const worlds: WorldCard[] = [
   { id: "social", name: "Social World", emoji: "🤝", description: "Build connections, grow your network.", active: true, path: "/worlds/social" },
   { id: "creative", name: "Creative World", emoji: "🎨", description: "Express yourself through creation.", active: true, path: "/worlds/creative" },
   { id: "mindfulness",name: "Mindfulness World", emoji: "🧘",description: "Relax your mind and improve awareness.",active: true,  path: "/worlds/mindfulness" },
+  { id: "finance", name: "Finance World", emoji: "💰", description: "Master your money, build your wealth.", active: true, path: "/worlds/finance" },
 ];
 
 const triggerConfetti = () => {
