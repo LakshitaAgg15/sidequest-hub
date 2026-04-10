@@ -26,11 +26,10 @@ const App = () => (
         <Route path="/worlds/study" element={<StudyWorld />} />
         <Route path="/worlds/social" element={<SocialWorld />} />
         <Route path="/worlds/creative" element={<CreativeWorld />} />
-
-        <Route path="*" element={<NotFound />} />
         <Route path="/worlds/outdoor" element={<OutdoorWorld />} />
         <Route path="/worlds/health" element={<HealthWorld/>} />
         <Route path="/worlds/fun" element={<FunWorld />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </QueryClientProvider>
