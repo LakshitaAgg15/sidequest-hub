@@ -17,6 +17,9 @@ import OutdoorWorld from "@/pages/OutdoorWorld";
 import HealthWorld from "@/pages/HealthWorld";
 import FunWorld from "@/pages/FunWorld";
 
+
+
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -38,7 +41,6 @@ const App = () => (
         <Route path="/worlds/outdoor" element={<OutdoorWorld />} />
         <Route path="/worlds/health" element={<HealthWorld/>} />
         <Route path="/worlds/fun" element={<FunWorld />} />
-  
       </Routes>
     </BrowserRouter>
   </QueryClientProvider>
