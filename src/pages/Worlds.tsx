@@ -23,6 +23,10 @@ const worlds: WorldCard[] = [
   { id: "fun", name: "Fun & Play World", emoji: "🎉", description: "Relax, enjoy, and have fun while staying active.", active: true, path: "/worlds/fun" },
   { id: "audio", name: "Audio & Learning World", emoji: "🎧", description: "Turn passive listening into active learning.", active: true, path: "/worlds/audio" },
   { id: "problem-solving", name: "Problem Solving World", emoji: "🧠", description: "Sharpen your thinking with daily mental challenges.", active: true, path: "/worlds/problem-solving" },
+  { id: "outdoor", name: "Outdoor World", emoji: "🌿", description: "Explore and connect with nature.", active: true, path: "/worlds/outdoor" },
+  { id: "health", name: "Health World", emoji: "🧠", description: "Improve your mental and physical wellbeing.", active: true, path: "/worlds/health" },
+  { id: "fun", name: "Fun World", emoji: "🎮", description: "Relax, play, and enjoy life.", active: true, path: "/worlds/fun" },
+
 ];
 
 const triggerConfetti = () => {
@@ -98,9 +102,7 @@ const Worlds = () => {
           >
             🎲 Random Quest
           </button>
-          <span className="text-muted-foreground text-xs font-mono">
-            worlds://index
-          </span>
+
         </div>
       </header>
 
