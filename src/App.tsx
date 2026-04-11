@@ -19,6 +19,10 @@ import FunWorld from "@/pages/FunWorld";
 import AudioWorld from "@/pages/AudioWorld";
 import ProblemSolvingWorld from "@/pages/ProblemSolvingWorld";
 
+
+
+
+
 const queryClient = new QueryClient();
 
 const App = () => (
