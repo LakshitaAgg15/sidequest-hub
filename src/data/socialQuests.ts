@@ -1,4 +1,4 @@
-import type { Quest } from "./socialQuests";
+import type { Quest } from "./fitnessQuests";
 
 export const socialQuests: Quest[] = [
   { id: "call",       title: "Call a friend or family member" },
